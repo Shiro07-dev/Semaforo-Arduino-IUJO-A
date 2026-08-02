@@ -39,4 +39,12 @@ void loop() {
   digitalWrite(Peatonal_Rojo_1,       LOW);
   digitalWrite(Semaforo_Rojo_2,       LOW);
   digitalWrite(Peatonal_Verde_2,      LOW);
+
+  digitalWrite(Semaforo_Rojo_1,      HIGH);
+  digitalWrite(Semaforo_Verde_2,     HIGH);
+  delay(3000);
+
+  digitalWrite(Semaforo_Verde_2,      LOW);
+  digitalWrite(Semaforo_Amarillo_2,  HIGH);
+  delay(1000);
 }
