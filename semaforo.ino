@@ -23,15 +23,20 @@ void setup() {
 }
 
 void loop() {
-  // Lógica de control de tráfico
-  // Próxima fase: lógica vehicular
   // FASE NORTE-SUR: VERDE
   digitalWrite(Semaforo_Verde_1,     HIGH);
+  digitalWrite(Peatonal_Rojo_1,      HIGH);
   digitalWrite(Semaforo_Rojo_2,      HIGH);
+  digitalWrite(Peatonal_Verde_2,     HIGH);
   delay(3000);
 
   // FASE NORTE-SUR: AMARILLO
   digitalWrite(Semaforo_Verde_1,      LOW);
   digitalWrite(Semaforo_Amarillo_1,  HIGH);
   delay(1000);
+
+  digitalWrite(Semaforo_Amarillo_1,   LOW);
+  digitalWrite(Peatonal_Rojo_1,       LOW);
+  digitalWrite(Semaforo_Rojo_2,       LOW);
+  digitalWrite(Peatonal_Verde_2,      LOW);
 }
